@@ -509,14 +509,14 @@
     }
 
     .admin-table .edit-btn {
-       background-color: #0071eb;
+        background-color: #0071eb;
     }
 
     .admin-table .delete-btn:hover {
       background-color: #f6121d;
     }
     .admin-table .edit-btn:hover {
-       background-color: #005bb5;
+        background-color: #005bb5;
     }
     
     .admin-table img {
@@ -787,7 +787,9 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
     import { 
       getAuth, 
-      signInWithPopup, 
+      // signInWithPopup, // We are replacing this with signInWithRedirect
+      signInWithRedirect, // <-- ADDED
+      getRedirectResult,  // <-- ADDED
       GoogleAuthProvider, 
       onAuthStateChanged, 
       signInWithCustomToken, 
@@ -939,6 +941,39 @@
 
         setupNavListeners();
 
+        // --- NEW: CHECK FOR REDIRECT RESULT ---
+        // This code runs when the page loads, *before* onAuthStateChanged
+        // It checks if the user is coming *back* from the Google login page
+        try {
+            console.log("Checking for redirect result...");
+            showLoading(true);
+            const result = await getRedirectResult(auth);
+            if (result) {
+                // This means the user has just signed in via Google redirect
+                console.log("Google Sign-In redirect successful:", result.user.displayName);
+                
+                // Create/update a public user document for the admin panel
+                const userRef = doc(db, 'artifacts', currentAppId, 'public/data/users', result.user.uid);
+                await setDoc(userRef, {
+                    uid: result.user.uid,
+                    displayName: result.user.displayName,
+                    email: result.user.email,
+                    lastLogin: serverTimestamp()
+                }, { merge: true });
+
+                showAlert(`Welcome, ${result.user.displayName}!`);
+                // onAuthStateChanged will now handle the page navigation
+            } else {
+                console.log("No redirect result found.");
+            }
+        } catch (error) {
+            console.error('Google Get Redirect Result Error:', error);
+            showAlert(`Login Error: ${error.message}`);
+        } finally {
+            showLoading(false);
+        }
+        // --- END OF NEW BLOCK ---
+
         onAuthStateChanged(auth, (user) => {
           if (user) {
             userId = user.uid;
@@ -993,30 +1028,21 @@
 
     // --- Authentication Functions ---
 
+    // --- MODIFIED: Use signInWithRedirect ---
     async function handleGoogleLogin() {
       const provider = new GoogleAuthProvider();
       try {
         showLoading(true);
-        console.log("Attempting Google Sign-In...");
-        const result = await signInWithPopup(auth, provider);
-        
-        // Create/update a public user document for the admin panel
-        const userRef = doc(db, 'artifacts', currentAppId, 'public/data/users', result.user.uid);
-        await setDoc(userRef, {
-          uid: result.user.uid,
-          displayName: result.user.displayName,
-          email: result.user.email,
-          lastLogin: serverTimestamp()
-        }, { merge: true });
-
-        console.log('Google Sign-In successful:', result.user.displayName);
-        showAlert(`Welcome, ${result.user.displayName}!`);
-        // onAuthStateChanged will handle the UI redirect to 'accounts'
+        console.log("Attempting Google Sign-In with Redirect...");
+        // This will navigate the user away to the Google login page
+        await signInWithRedirect(auth, provider);
+        // The code after this won't run because the page navigates away.
+        // The result is handled by `getRedirectResult` when the page reloads.
       } catch (error) {
-        console.error('Google Sign-In Error:', error);
+        // This will only catch immediate errors, e.g., if auth isn't setup
+        console.error('Google Sign-In Redirect Error:', error);
         showAlert(`Login Error: ${error.message}`);
-      } finally {
-        showLoading(false);
+        showLoading(false); // Only stop loading if there's an immediate error
       }
     }
 
@@ -1036,8 +1062,8 @@
       
       if (username === 'admin' && password === 'password123') {
         if (!auth.currentUser || auth.currentUser.isAnonymous) {
-           showAlert('Admin must sign in with Google first.');
-           return;
+            showAlert('Admin must sign in with Google first.');
+            return;
         }
         
         isAdmin = true;
