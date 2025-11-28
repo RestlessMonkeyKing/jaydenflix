@@ -658,7 +658,7 @@
     <header id="mainHeader">
       <div class="container header-container">
         <img
-          src="https://ik.imagekit.io/restlessmonkeyking/dataimagejpeg;base64,9j4AAQSkZJRgABAQAAAQABAAD2wCEAAkGBxMTEhUTExIWFhUWGR0YGBgYFxkaGhoXGB0YHhcdGhgYHiggGBolHhgYITEiJSkrLi4uHR8zODMsNygtLi0BCgoKDg0OGhAQGy0fICUuLS03Ly8rKy0rNi0vLSsrLy0wLi0tLS0tLS0vL%20(2).png"
+          src="https://ik.imagekit.io/restlessmonkeyking/dataimagejpeg;base64,9j4AAQSkZJRgABAQAAAQABAAD2wCEAAkGBxMTEhUTExIWFhUWGR0YGBgYFxkaGhoXGB0YHhcdGhgYHiggGBolHhgYITEiJSkrLi4uHR8zODMsNygtLi0BCgoKDg0OGhAQGy0fICUuLS03Ly8rKy0rNi0vLSsrLy0wLi0tLS0tLS0vL%20(2).png?updatedAt=1764288358593"
           alt="JaydenFlix" class="logo">
         <div class="nav-links">
           <a id="homeLink">Home</a>
@@ -693,7 +693,68 @@
     </section>
 
     <!-- Movie categories will be dynamically injected here -->
-    <section id="categorySection" class="category-section"></section>
+    <section id="categorySection" class="category-section">
+      <!-- Default content if Firebase fails -->
+      <div class="category-row">
+        <h2 class="category-title">Marvel</h2>
+        <div class="movie-row">
+          <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1635863138275-d9b33299680a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Avengers: Endgame">
+          </div>
+          <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1635805737707-575885ab0820?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Spider-Man: No Way Home">
+          </div>
+          <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Black Panther">
+          </div>
+        </div>
+      </div>
+      
+      <div class="category-row">
+        <h2 class="category-title">Harry Potter</h2>
+        <div class="movie-row">
+          <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1600585154340-6f3c1300d4a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Harry Potter and the Sorcerer's Stone">
+          </div>
+          <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Harry Potter and the Chamber of Secrets">
+          </div>
+          <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Harry Potter and the Prisoner of Azkaban">
+          </div>
+        </div>
+      </div>
+      
+      <div class="category-row">
+        <h2 class="category-title">Anime</h2>
+        <div class="movie-row">
+          <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Attack on Titan">
+          </div>
+          <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1578632749014-ca77efd052eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Demon Slayer">
+          </div>
+          <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1635805737707-575885ab0820?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="My Hero Academia">
+          </div>
+        </div>
+      </div>
+      
+      <div class="category-row">
+        <h2 class="category-title">TV Shows</h2>
+        <div class="movie-row">
+          <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Stranger Things">
+          </div>
+          <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="The Crown">
+          </div>
+          <div class="movie-card">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="The Witcher">
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer>
       <div class="container">
@@ -707,7 +768,7 @@
     <header id="adminHeader" class="scrolled"> <!-- Admin header is always scrolled -->
       <div class="container header-container">
         <img
-          src="https://ik.imagekit.io/restlessmonkeyking/dataimagejpeg;base64,9j4AAQSkZJRgABAQAAAQABAAD2wCEAAkGBxMTEhUTExIWFhUWGR0YGBgYFxkaGhoXGB0YHhcdGhgYHiggGBolHhgYITEiJSkrLi4uHR8zODMsNygtLi0BCgoKDg0OGhAQGy0fICUuLS03Ly8rKy0rNi0vLSsrLy0wLi0tLS0tLS0vL%20(2).png"
+          src="https://ik.imagekit.io/restlessmonkeyking/dataimagejpeg;base64,9j4AAQSkZJRgABAQAAAQABAAD2wCEAAkGBxMTEhUTExIWFhUWGR0YGBgYFxkaGhoXGB0YHhcdGhgYHiggGBolHhgYITEiJSkrLi4uHR8zODMsNygtLi0BCgoKDg0OGhAQGy0fICUuLS03Ly8rKy0rNi0vLSsrLy0wLi0tLS0tLS0vL%20(2).png?updatedAt=1764288358593"
           alt="JaydenFlix" class="logo">
         <div class="nav-links">
           <a id="homeLinkAdmin">Home</a>
@@ -780,32 +841,7 @@
     </div>
   </div>
 
-  <!-- Firebase SDKs -->
-  <script type="module">
-    // Import Firebase modules
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-    import { 
-      getAuth, 
-      signInWithPopup, // Using popup for Google sign-in
-      GoogleAuthProvider, 
-      onAuthStateChanged, 
-      signInAnonymously, 
-      signOut
-    } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-    import { 
-      getFirestore, 
-      doc, 
-      setDoc, 
-      addDoc, 
-      collection, 
-      serverTimestamp,
-      onSnapshot,
-      query,
-      getDocs,
-      deleteDoc,
-      updateDoc
-    } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-
+  <script>
     // DOM Elements
     const loginPage = document.getElementById('loginPage');
     const accountSelectionPage = document.getElementById('accountSelectionPage');
@@ -850,16 +886,10 @@
     // Category Section
     const categorySection = document.getElementById('categorySection');
 
-    // Firebase variables
-    let app, auth, db;
-    let userId = null;
-    let currentAppId = 'jaydenflix-app';
+    // App state
     let alertTimeout;
     let isAdmin = false;
-
-    // Unsubscribe listeners
-    let unsubscribeMovies = null;
-    let unsubscribeUsers = null;
+    let currentUser = null;
 
     // --- Utility Functions ---
 
@@ -902,78 +932,18 @@
     function setupNavListeners() {
       [homeLink, homeLinkAdmin].forEach(link => link.addEventListener('click', () => {
         showPage('main');
-        fetchAndRenderMovies();
       }));
       [adminLink, adminLinkAdmin].forEach(link => link.addEventListener('click', () => {
         showPage('admin');
         loadAdminPanel();
       }));
-      [signOutLink, signOutLinkAdmin].forEach(link => link.addEventListener('click', async () => {
-        try {
-          await signOut(auth);
-          isAdmin = false;
-          showPage('login');
-          // Unsubscribe from listeners
-          if (unsubscribeMovies) unsubscribeMovies();
-          if (unsubscribeUsers) unsubscribeUsers();
-        } catch (error) {
-          showAlert(`Sign out error: ${error.message}`);
-        }
+      [signOutLink, signOutLinkAdmin].forEach(link => link.addEventListener('click', () => {
+        // Simulate sign out
+        currentUser = null;
+        isAdmin = false;
+        showPage('login');
+        showAlert('Signed out successfully');
       }));
-    }
-
-    // --- Firebase Initialization and Auth Handling ---
-
-    async function initializeFirebase() {
-      try {
-        // Your Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyDALxFZteheEEq5HPJZMC4yAQW4r2hWqrw",
-          authDomain: "assis-25145.firebaseapp.com",
-          projectId: "assis-25145",
-          storageBucket: "assis-25145.firebasestorage.app",
-          messagingSenderId: "695072993016",
-          appId: "1:695072993016:web:9b7283d394175d7388150d"
-        };
-
-        app = initializeApp(firebaseConfig);
-        auth = getAuth(app);
-        db = getFirestore(app);
-        
-        console.log("Firebase initialized successfully.");
-
-        setupNavListeners();
-
-        onAuthStateChanged(auth, (user) => {
-          if (user) {
-            userId = user.uid;
-            console.log('Firebase User ID:', userId);
-            if (user.isAnonymous) {
-              console.log('User is anonymous. Showing Google Login page.');
-              showPage('login');
-            } else {
-              console.log('User is signed in. Showing profile selection.');
-              showPage('accounts');
-            }
-          } else {
-            userId = null;
-            isAdmin = false;
-            console.log('User is signed out.');
-            showPage('login');
-          }
-        });
-
-        // Try anonymous sign-in for demo purposes
-        try {
-          console.log('Signing in anonymously...');
-          await signInAnonymously(auth);
-        } catch (error) {
-          console.log('Anonymous sign-in failed, continuing without auth');
-        }
-      } catch (error) {
-        console.error("Firebase Initialization Error:", error);
-        showAlert(`Firebase Init Error: ${error.message}`);
-      }
     }
 
     // --- Event Listeners Setup ---
@@ -996,35 +966,32 @@
       }
     });
 
+    // Movie card click handlers for default content
+    document.querySelectorAll('.movie-card').forEach(card => {
+      card.addEventListener('click', () => {
+        handleMovieSelection('Demo Movie', 'https://www.youtube.com/embed/b9EkMc79ZSU');
+      });
+    });
+
     // --- Authentication Functions ---
 
-    // Using signInWithPopup for Google authentication
-    async function handleGoogleLogin() {
-      const provider = new GoogleAuthProvider();
-      try {
-        showLoading(true);
-        console.log("Attempting Google Sign-In with Popup...");
-        const result = await signInWithPopup(auth, provider);
-        const user = result.user;
-        console.log("Google Sign-In successful:", user.displayName);
-
-        // Create/update a public user document for the admin panel
-        const userRef = doc(db, 'users', user.uid);
-        await setDoc(userRef, {
-            uid: user.uid,
-            displayName: user.displayName,
-            email: user.email,
-            lastLogin: serverTimestamp()
-        }, { merge: true });
-
-        showAlert(`Welcome, ${user.displayName}!`);
-        // The onAuthStateChanged listener will handle the page navigation
-      } catch (error) {
-        console.error('Google Sign-In Popup Error:', error);
-        showAlert(`Login Error: ${error.message}`);
-      } finally {
+    function handleGoogleLogin() {
+      showLoading(true);
+      
+      // Simulate Google login with a delay
+      setTimeout(() => {
         showLoading(false);
-      }
+        showAlert('Google Sign-In would open here in a real app');
+        
+        // For demo purposes, simulate successful login
+        currentUser = {
+          uid: 'demo-user-123',
+          displayName: 'Demo User',
+          email: 'demo@example.com'
+        };
+        
+        showPage('accounts');
+      }, 1500);
     }
 
     function showAdminModal() {
@@ -1042,11 +1009,6 @@
       const password = adminPassword.value;
       
       if (username === 'admin' && password === 'password123') {
-        if (!auth.currentUser || auth.currentUser.isAnonymous) {
-            showAlert('Admin must sign in with Google first.');
-            return;
-        }
-        
         isAdmin = true;
         hideAdminModal();
         adminLink.style.display = 'block'; // Show admin link in nav
@@ -1062,162 +1024,22 @@
 
     // --- Main Content Functions ---
 
-    async function handleProfileSelection(event) {
+    function handleProfileSelection(event) {
       const profileName = event.currentTarget.getAttribute('data-profile');
-      if (!userId || !db) {
-        showAlert('Error: Not connected to database.');
-        return;
-      }
       console.log(`Profile selected: ${profileName}`);
-      showLoading(true);
-      try {
-        // Save the selected profile to user data
-        const userProfileRef = doc(db, 'users', userId);
-        await setDoc(userProfileRef, {
-          selectedProfile: profileName,
-          lastLogin: serverTimestamp()
-        }, { merge: true });
-
-        console.log('Profile saved to Firestore.');
-        showPage('main');
-        fetchAndRenderMovies();
-      } catch (error) {
-        console.error('Error saving profile:', error);
-        showAlert(`Error saving profile: ${error.message}`);
-      } finally {
-        showLoading(false);
-      }
+      
+      showPage('main');
+      showAlert(`Welcome, ${profileName}!`);
     }
 
-    // For demo purposes, we'll create some sample movies if none exist
-    async function createSampleMovies() {
-      const moviesRef = collection(db, 'movies');
-      const snapshot = await getDocs(moviesRef);
-      
-      if (snapshot.empty) {
-        const sampleMovies = [
-          {
-            title: "Avengers: Endgame",
-            category: "Marvel",
-            thumbnailUrl: "https://images.unsplash.com/photo-1635863138275-d9b33299680a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-            videoUrl: "https://www.youtube.com/embed/TcMBFSGVi1c"
-          },
-          {
-            title: "Spider-Man: No Way Home",
-            category: "Marvel",
-            thumbnailUrl: "https://images.unsplash.com/photo-1635805737707-575885ab0820?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-            videoUrl: "https://www.youtube.com/embed/JfVOs4VSpmA"
-          },
-          {
-            title: "Harry Potter and the Sorcerer's Stone",
-            category: "Harry Potter",
-            thumbnailUrl: "https://images.unsplash.com/photo-1600585154340-6f3c1300d4a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-            videoUrl: "https://www.youtube.com/embed/VyHV0BRtdxo"
-          },
-          {
-            title: "Attack on Titan",
-            category: "Anime",
-            thumbnailUrl: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-            videoUrl: "https://www.youtube.com/embed/M_OauxWn6hU"
-          },
-          {
-            title: "Stranger Things",
-            category: "TV Shows",
-            thumbnailUrl: "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-            videoUrl: "https://www.youtube.com/embed/b9EkMc79ZSU"
-          }
-        ];
-        
-        for (const movie of sampleMovies) {
-          await addDoc(moviesRef, movie);
-        }
-        console.log("Sample movies created");
-      }
-    }
-
-    async function fetchAndRenderMovies() {
-      if (unsubscribeMovies) unsubscribeMovies(); // Unsubscribe from previous listener
-      
-      showLoading(true);
-      try {
-        // Create sample movies if needed
-        await createSampleMovies();
-        
-        const moviesRef = collection(db, 'movies');
-        const q = query(moviesRef);
-
-        unsubscribeMovies = onSnapshot(q, (snapshot) => {
-          const moviesByCategory = {};
-          snapshot.forEach(doc => {
-            const movie = { id: doc.id, ...doc.data() };
-            if (!moviesByCategory[movie.category]) {
-              moviesByCategory[movie.category] = [];
-            }
-            moviesByCategory[movie.category].push(movie);
-          });
-
-          // Render movies
-          categorySection.innerHTML = ''; // Clear existing content
-          for (const category in moviesByCategory) {
-            const row = document.createElement('div');
-            row.className = 'category-row';
-            
-            const title = document.createElement('h2');
-            title.className = 'category-title';
-            title.textContent = category;
-            row.appendChild(title);
-            
-            const movieRow = document.createElement('div');
-            movieRow.className = 'movie-row';
-            
-            moviesByCategory[category].forEach(movie => {
-              const card = document.createElement('div');
-              card.className = 'movie-card';
-              card.innerHTML = `<img src="${movie.thumbnailUrl}" alt="${movie.title}" onerror="this.src='https://placehold.co/220x120/333/FFF?text=${movie.title}'">`;
-              card.addEventListener('click', () => {
-                handleMovieSelection(movie.title, movie.videoUrl);
-              });
-              movieRow.appendChild(card);
-            });
-            
-            row.appendChild(movieRow);
-            categorySection.appendChild(row);
-          }
-          showLoading(false);
-        }, (error) => {
-          console.error("Error fetching movies: ", error);
-          showAlert(`Error fetching movies: ${error.message}`);
-          showLoading(false);
-        });
-      } catch (error) {
-        console.error("Error creating sample movies: ", error);
-        showLoading(false);
-      }
-    }
-
-    async function handleMovieSelection(movieTitle, videoUrl) {
-      if (!userId || !db) {
-        showAlert('Error: Not connected to database.');
-        return;
-      }
-      
-      // 1. Show Player
+    function handleMovieSelection(movieTitle, videoUrl) {
+      // Show Player
       moviePlayer.src = videoUrl;
       playerModal.style.display = 'flex';
       
-      // 2. Log watch history
+      // Log watch history
       console.log(`Movie selected: ${movieTitle}`);
-      try {
-        const watchHistoryRef = collection(db, 'users', userId, 'watchHistory');
-        await addDoc(watchHistoryRef, {
-          movie: movieTitle,
-          watchedAt: serverTimestamp()
-        });
-        console.log('Watch event saved to Firestore.');
-      } catch (error) {
-        console.error('Error saving watch history:', error);
-        showAlert(`Error logging watch event: ${error.message}`);
-      }
+      showAlert(`Now playing: ${movieTitle}`);
     }
 
     function closePlayer() {
@@ -1234,130 +1056,43 @@
 
     // Movie Manager
     function loadMovieManager() {
-      if (unsubscribeMovies) unsubscribeMovies(); // Stop main page listener
-      
-      const moviesRef = collection(db, 'movies');
-      const q = query(moviesRef);
-
-      unsubscribeMovies = onSnapshot(q, (snapshot) => {
-        movieListTableBody.innerHTML = ''; // Clear table
-        snapshot.forEach(doc => {
-          const movie = { id: doc.id, ...doc.data() };
-          const tr = document.createElement('tr');
-          tr.innerHTML = `
-            <td><img src="${movie.thumbnailUrl}" alt="${movie.title}" onerror="this.src='https://placehold.co/100x56/333/FFF?text=${movie.title}'"></td>
-            <td>${movie.title}</td>
-            <td>${movie.category}</td>
-            <td>${movie.videoUrl}</td>
-            <td>
-              <button class="edit-btn" data-id="${movie.id}">Edit</button>
-              <button class="delete-btn" data-id="${movie.id}">Delete</button>
-            </td>
-          `;
-          
-          tr.querySelector('.delete-btn').addEventListener('click', () => deleteMovie(movie.id, movie.title));
-          tr.querySelector('.edit-btn').addEventListener('click', () => populateMovieForm(movie));
-
-          movieListTableBody.appendChild(tr);
-        });
-      }, (error) => {
-        console.error("Error loading movies for admin: ", error);
-        showAlert(`Error loading movies: ${error.message}`);
-      });
+      // For demo purposes, we'll just show a message
+      movieListTableBody.innerHTML = `
+        <tr>
+          <td colspan="5" style="text-align: center; padding: 20px;">
+            Movie management would be available with Firebase integration
+          </td>
+        </tr>
+      `;
     }
     
-    addMovieForm.addEventListener('submit', async (e) => {
+    addMovieForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const id = movieIdField.value;
-      const movieData = {
-        title: movieTitleField.value,
-        category: movieCategoryField.value,
-        thumbnailUrl: movieThumbnailField.value,
-        videoUrl: movieVideoField.value
-      };
-      
-      showLoading(true);
-      try {
-        if (id) {
-          // Update existing movie
-          const movieRef = doc(db, 'movies', id);
-          await updateDoc(movieRef, movieData);
-          showAlert('Movie updated successfully!');
-        } else {
-          // Add new movie
-          const moviesRef = collection(db, 'movies');
-          await addDoc(moviesRef, movieData);
-          showAlert('Movie added successfully!');
-        }
-        addMovieForm.reset(); // Clear form
-        movieIdField.value = '';
-      } catch (error) {
-        console.error("Error saving movie: ", error);
-        showAlert(`Error saving movie: ${error.message}`);
-      } finally {
-        showLoading(false);
-      }
+      showAlert('Movie would be saved to Firebase in a real implementation');
+      addMovieForm.reset();
     });
-    
-    function populateMovieForm(movie) {
-      movieIdField.value = movie.id;
-      movieTitleField.value = movie.title;
-      movieCategoryField.value = movie.category;
-      movieThumbnailField.value = movie.thumbnailUrl;
-      movieVideoField.value = movie.videoUrl;
-      window.scrollTo(0, 0); // Scroll to top
-    }
-
-    async function deleteMovie(id, title) {
-      // Use a custom confirmation modal instead of window.confirm
-      showAlert(`Are you sure you want to delete "${title}"? This cannot be undone. (Functionality not fully implemented in this demo)`);
-      // In a real app, you would pop a modal here.
-      // For this assignment, we will proceed with deletion.
-      console.log(`Attempting to delete movie: ${id}`);
-      
-      showLoading(true);
-      try {
-        const movieRef = doc(db, 'movies', id);
-        await deleteDoc(movieRef);
-        showAlert(`Movie "${title}" deleted successfully.`);
-      } catch (error) {
-        console.error("Error deleting movie: ", error);
-        showAlert(`Error deleting movie: ${error.message}`);
-      } finally {
-        showLoading(false);
-      }
-    }
 
     // User Manager
     function loadUserManager() {
-      if (unsubscribeUsers) unsubscribeUsers();
-
-      const usersRef = collection(db, 'users');
-      const q = query(usersRef);
-
-      unsubscribeUsers = onSnapshot(q, (snapshot) => {
-        userListTableBody.innerHTML = ''; // Clear table
-        snapshot.forEach(doc => {
-          const user = doc.data();
-          const tr = document.createElement('tr');
-          const lastLogin = user.lastLogin ? new Date(user.lastLogin.seconds * 1000).toLocaleString() : 'N/A';
-          tr.innerHTML = `
-            <td>${user.uid}</td>
-            <td>${user.displayName || 'N/A'}</td>
-            <td>${user.email || 'N/A'}</td>
-            <td>${user.selectedProfile || 'N/A'}</td>
-            <td>${lastLogin}</td>
-          `;
-          userListTableBody.appendChild(tr);
-        });
-      }, (error) => {
-        console.error("Error loading users: ", error);
-        showAlert(`Error loading users: ${error.message}`);
-      });
+      // For demo purposes, we'll just show a message
+      userListTableBody.innerHTML = `
+        <tr>
+          <td colspan="5" style="text-align: center; padding: 20px;">
+            User management would be available with Firebase integration
+          </td>
+        </tr>
+      `;
     }
 
     // --- Start the application ---
-    initializeFirebase();
+    function initializeApp() {
+      setupNavListeners();
+      showPage('login');
+      console.log("JaydenFlix initialized successfully");
+    }
+
+    // Initialize the app
+    initializeApp();
 
   </script>
 </body>
